@@ -16,6 +16,7 @@
 		116C69391DFE7268009C66F6 /* TestCocoaPodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 116C69381DFE7268009C66F6 /* TestCocoaPodTests.m */; };
 		116C69441DFE7268009C66F6 /* TestCocoaPodUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 116C69431DFE7268009C66F6 /* TestCocoaPodUITests.m */; };
 		116C69571DFE78E7009C66F6 /* CacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 116C69561DFE78E7009C66F6 /* CacheTool.m */; };
+		116C695B1DFE8ABC009C66F6 /* CommonFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 116C695A1DFE8ABC009C66F6 /* CommonFunc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		116C69451DFE7268009C66F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		116C69551DFE78E7009C66F6 /* CacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheTool.h; sourceTree = "<group>"; };
 		116C69561DFE78E7009C66F6 /* CacheTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheTool.m; sourceTree = "<group>"; };
+		116C69591DFE8ABC009C66F6 /* CommonFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonFunc.h; sourceTree = "<group>"; };
+		116C695A1DFE8ABC009C66F6 /* CommonFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonFunc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 		116C691D1DFE7267009C66F6 /* TestCocoaPod */ = {
 			isa = PBXGroup;
 			children = (
+				116C69581DFE8ABC009C66F6 /* Common */,
 				116C69541DFE78E7009C66F6 /* CacheTool */,
 				116C69211DFE7268009C66F6 /* AppDelegate.h */,
 				116C69221DFE7268009C66F6 /* AppDelegate.m */,
@@ -151,6 +155,15 @@
 				116C69561DFE78E7009C66F6 /* CacheTool.m */,
 			);
 			path = CacheTool;
+			sourceTree = "<group>";
+		};
+		116C69581DFE8ABC009C66F6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				116C69591DFE8ABC009C66F6 /* CommonFunc.h */,
+				116C695A1DFE8ABC009C66F6 /* CommonFunc.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +305,7 @@
 				116C69571DFE78E7009C66F6 /* CacheTool.m in Sources */,
 				116C69261DFE7268009C66F6 /* ViewController.m in Sources */,
 				116C69231DFE7268009C66F6 /* AppDelegate.m in Sources */,
+				116C695B1DFE8ABC009C66F6 /* CommonFunc.m in Sources */,
 				116C69201DFE7268009C66F6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
