@@ -26,7 +26,9 @@ Pod::Spec.new do |s|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description  = <<-DESC
-   这只是一个建立pod仓库的简单demo，并没有实际的意思。学习使用。
+
+                    这只是一个建立pod仓库的简单demo，并没有实际的意思。学习使用。
+
                    DESC
 
   s.homepage     = "https://github.com/runnerMJP/TestCocoaPod.git"
@@ -66,7 +68,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, "7.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -81,7 +83,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/runnerMJP/TestCocoaPod.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/runnerMJP/TestCocoaPod.git", :tag => "0.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -92,7 +94,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "TestCocoaPod/TestCocoaPod/CacheTool/**/*.{h,m}"
+  s.source_files  = "TestCocoaPod/TestCocoaPod/CacheTool/*.{h,m}"
 
   # s.exclude_files = "Classes/Exclude"
 
