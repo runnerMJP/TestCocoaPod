@@ -92,7 +92,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "CacheTool/*.{h,m}"
+  s.source_files  = "TestCocoaPod/TestCocoaPod/CacheTool/**/*.{h,m}"
 
   # s.exclude_files = "Classes/Exclude"
 
