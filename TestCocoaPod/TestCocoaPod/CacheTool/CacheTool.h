@@ -14,7 +14,7 @@
 /**
  计算一个文件夹的大小
  */
-//+(NSString *)getCacheSize:(NSString*)cachePath;
++(NSString *)getCacheSize:(NSString*)cachePath;
 
 
 /**
