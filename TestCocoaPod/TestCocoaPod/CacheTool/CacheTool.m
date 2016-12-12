@@ -18,7 +18,8 @@
 
     // 获取Cache文件夹的路径
     NSString *sizeStr = @"";
-    int size = [self getFileSize:cachePath];
+//    NSInteger size = [self getFileSize:cachePath];
+    NSInteger size = 10000000;
     // 手机内存1MB = 1000KB
     if (size > 1000 * 1000) {//MB
         CGFloat sizeF = size / 1000.0 /1000.0;
@@ -35,70 +36,70 @@
 
 }
 
-#pragma mark - 计算文件的大小
-+(int)getFileSize:(NSString *)directoryPath{
-    
-    // 文件管理者
-    NSFileManager *manger = [NSFileManager defaultManager];
-    // 判断是否是文件夹
-    BOOL isDirectory;
-    BOOL isExist = [manger fileExistsAtPath:directoryPath isDirectory:&isDirectory];
-    if (!isDirectory || !isExist){
-    
-        NSException *cept = [NSException exceptionWithName:@"pathError" reason:@"需要传入的是文件夹，且路径要存在" userInfo:nil];
-        // 抛出异常
-        [cept raise];
-    }
-
-    // 遍历default里所有的文件
-    NSArray *subPaths = [manger subpathsAtPath:directoryPath];
-    int totalSize = 0;
-    for (NSString *subPath in subPaths) {
-        //每个文件的全路径
-        NSString *filePath = [directoryPath stringByAppendingPathComponent:subPath];
-        
-        // 不计算隐藏文件
-        if([filePath containsString:@".DS"])continue;
-        
-        // 判断是否是文件夹
-        BOOL isDirectory;
-        BOOL isExist = [manger fileExistsAtPath:filePath isDirectory:&isDirectory];
-        if (isDirectory || !isExist) continue;
-        
-        // 获取文件属性
-        NSDictionary *dict = [manger attributesOfItemAtPath:filePath error:nil];
-        
-        int fileSize = (int)[dict fileSize];
-        totalSize +=fileSize;
-    }
-    //    JPLog(@"大小%ld",(long)totalSize);
-    return totalSize;
-    
-}
-#pragma mark - 清除缓存
-+(void)removeCache:(NSString *)cachePath{
-    // 文件管理者
-    NSFileManager *manger = [NSFileManager defaultManager];
-    // 判断是否是文件夹
-    BOOL isDirectory;
-    BOOL isExist = [manger fileExistsAtPath:cachePath isDirectory:&isDirectory];
-    if (!isDirectory || !isExist){
-        // 创建异常
-        NSException *cept = [NSException exceptionWithName:@"pathError" reason:@"需要传入的是文件夹，且路径要存在" userInfo:nil];
-        // 抛出异常
-        [cept raise];
-    }
-
-    // 获取cache文件下的所有文件
-    NSArray *subPaths = [manger contentsOfDirectoryAtPath:cachePath error:nil];
-    
-    for (NSString *subPath in subPaths) {
-        //拿到每个文件的子路径
-        NSString *filePath = [cachePath stringByAppendingPathComponent:subPath];
-        // 删除文件（清除缓存）
-        [manger removeItemAtPath:filePath error:nil];
-    }
-    
-}
+//#pragma mark - 计算文件的大小
+//+(NSInteger)getFileSize:(NSString *)directoryPath{
+//    
+//    // 文件管理者
+//    NSFileManager *manger = [NSFileManager defaultManager];
+//    // 判断是否是文件夹
+//    BOOL isDirectory;
+//    BOOL isExist = [manger fileExistsAtPath:directoryPath isDirectory:&isDirectory];
+//    if (!isDirectory || !isExist){
+//    
+//        NSException *cept = [NSException exceptionWithName:@"pathError" reason:@"需要传入的是文件夹，且路径要存在" userInfo:nil];
+//        // 抛出异常
+//        [cept raise];
+//    }
+//
+//    // 遍历default里所有的文件
+//    NSArray *subPaths = [manger subpathsAtPath:directoryPath];
+//    NSInteger totalSize = 0;
+//    for (NSString *subPath in subPaths) {
+//        //每个文件的全路径
+//        NSString *filePath = [directoryPath stringByAppendingPathComponent:subPath];
+//        
+//        // 不计算隐藏文件
+//        if([filePath containsString:@".DS"])continue;
+//        
+//        // 判断是否是文件夹
+//        BOOL isDirectory;
+//        BOOL isExist = [manger fileExistsAtPath:filePath isDirectory:&isDirectory];
+//        if (isDirectory || !isExist) continue;
+//        
+//        // 获取文件属性
+//        NSDictionary *dict = [manger attributesOfItemAtPath:filePath error:nil];
+//        
+//        NSInteger fileSize = [dict fileSize];
+//        totalSize +=fileSize;
+//    }
+//    //    JPLog(@"大小%ld",(long)totalSize);
+//    return totalSize;
+//    
+//}
+//#pragma mark - 清除缓存
+//+(void)removeCache:(NSString *)cachePath{
+//    // 文件管理者
+//    NSFileManager *manger = [NSFileManager defaultManager];
+//    // 判断是否是文件夹
+//    BOOL isDirectory;
+//    BOOL isExist = [manger fileExistsAtPath:cachePath isDirectory:&isDirectory];
+//    if (!isDirectory || !isExist){
+//        // 创建异常
+//        NSException *cept = [NSException exceptionWithName:@"pathError" reason:@"需要传入的是文件夹，且路径要存在" userInfo:nil];
+//        // 抛出异常
+//        [cept raise];
+//    }
+//
+//    // 获取cache文件下的所有文件
+//    NSArray *subPaths = [manger contentsOfDirectoryAtPath:cachePath error:nil];
+//    
+//    for (NSString *subPath in subPaths) {
+//        //拿到每个文件的子路径
+//        NSString *filePath = [cachePath stringByAppendingPathComponent:subPath];
+//        // 删除文件（清除缓存）
+//        [manger removeItemAtPath:filePath error:nil];
+//    }
+//    
+//}
 
 @end
