@@ -11,9 +11,9 @@
 
 @interface CommonFunc : NSObject
 
-+(UILabel*) createLabel:(NSString*)text FontSize:(int)size TextColor:(UIColor*)textColor Rect:(CGRect)rect Align:(NSTextAlignment)align;
-+(UILabel*)createFontNameLabel:(NSString*)text FontName:(NSString *)name Size:(int)size TextColor:(UIColor*)textColor Rect:(CGRect)rect Align:(NSTextAlignment)align;
-+(UIImageView *)creatImgeViewRect:(CGRect)rect  Img:(NSString *)image alpha:(CGFloat)alpha;
+//+(UILabel*) createLabel:(NSString*)text FontSize:(int)size TextColor:(UIColor*)textColor Rect:(CGRect)rect Align:(NSTextAlignment)align;
+//+(UILabel*)createFontNameLabel:(NSString*)text FontName:(NSString *)name Size:(int)size TextColor:(UIColor*)textColor Rect:(CGRect)rect Align:(NSTextAlignment)align;
+//+(UIImageView *)creatImgeViewRect:(CGRect)rect  Img:(NSString *)image alpha:(CGFloat)alpha;
 
 
 /**
@@ -61,9 +61,5 @@
  */
 + (NSAttributedString *)setAttibuteWithRange:(NSRange )rang Text:(NSString *)text;
 
-/**
- *  退出登录的时候删除本地的一切用户信息
- */
-+ (void)removeAllInformationsForloginout;
 
 @end

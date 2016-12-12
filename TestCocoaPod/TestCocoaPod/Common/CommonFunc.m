@@ -56,29 +56,29 @@
 }
 
 
-+(UILabel*) createLabel:(NSString*)text FontSize:(int)size TextColor:(UIColor*)textColor Rect:(CGRect)rect Align:(NSTextAlignment)align
-{
-    UILabel* label = [[UILabel alloc] initWithFrame:rect];
-    label.backgroundColor = [UIColor clearColor];
-    label.textColor = textColor;
-    label.font = [UIFont systemFontOfSize:size];
-    label.textAlignment = align;
-    label.text = text;
-    return label;
-}
-
-
-+(UILabel*)createFontNameLabel:(NSString*)text FontName:(NSString *)name Size:(int)size TextColor:(UIColor*)textColor Rect:(CGRect)rect Align:(NSTextAlignment)align
-{
-    UILabel* label = [[UILabel alloc] initWithFrame:rect];
-    label.backgroundColor = [UIColor clearColor];
-    label.textColor = textColor;
-    //    label.font = [UIFont systemFontOfSize:size];
-    label.font = [UIFont fontWithName:name size:size];
-    label.textAlignment = align;
-    label.text = text;
-    return label;
-}
+//+(UILabel*) createLabel:(NSString*)text FontSize:(int)size TextColor:(UIColor*)textColor Rect:(CGRect)rect Align:(NSTextAlignment)align
+//{
+//    UILabel* label = [[UILabel alloc] initWithFrame:rect];
+//    label.backgroundColor = [UIColor clearColor];
+//    label.textColor = textColor;
+//    label.font = [UIFont systemFontOfSize:size];
+//    label.textAlignment = align;
+//    label.text = text;
+//    return label;
+//}
+//
+//
+//+(UILabel*)createFontNameLabel:(NSString*)text FontName:(NSString *)name Size:(int)size TextColor:(UIColor*)textColor Rect:(CGRect)rect Align:(NSTextAlignment)align
+//{
+//    UILabel* label = [[UILabel alloc] initWithFrame:rect];
+//    label.backgroundColor = [UIColor clearColor];
+//    label.textColor = textColor;
+//    //    label.font = [UIFont systemFontOfSize:size];
+//    label.font = [UIFont fontWithName:name size:size];
+//    label.textAlignment = align;
+//    label.text = text;
+//    return label;
+//}
 
 +(UIImageView *)creatImgeViewRect:(CGRect)rect Img:(NSString *)image alpha:(CGFloat)alpha
 {
