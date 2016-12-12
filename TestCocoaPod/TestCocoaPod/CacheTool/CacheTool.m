@@ -18,7 +18,7 @@
 
     // 获取Cache文件夹的路径
     NSString *sizeStr = @"";
-    NSInteger size = [self getFileSize:cachePath];
+    unsigned long long size = [self getFileSize:cachePath];
     // 手机内存1MB = 1000KB
     if (size > 1000 * 1000) {//MB
         CGFloat sizeF = size / 1000.0 /1000.0;
@@ -36,7 +36,7 @@
 }
 
 #pragma mark - 计算文件的大小
-+(NSInteger)getFileSize:(NSString *)directoryPath{
++(unsigned long long)getFileSize:(NSString *)directoryPath{
     
     // 文件管理者
     NSFileManager *manger = [NSFileManager defaultManager];
@@ -52,7 +52,7 @@
 
     // 遍历default里所有的文件
     NSArray *subPaths = [manger subpathsAtPath:directoryPath];
-    NSInteger totalSize = 0;
+    unsigned long long totalSize = 0;
     for (NSString *subPath in subPaths) {
         //每个文件的全路径
         NSString *filePath = [directoryPath stringByAppendingPathComponent:subPath];
@@ -68,10 +68,10 @@
         // 获取文件属性
         NSDictionary *dict = [manger attributesOfItemAtPath:filePath error:nil];
         
-        NSInteger fileSize = [dict fileSize];
+        unsigned long long fileSize = [dict fileSize];
         totalSize +=fileSize;
     }
-    //    JPLog(@"大小%ld",(long)totalSize);
+ 
     return totalSize;
     
 }
