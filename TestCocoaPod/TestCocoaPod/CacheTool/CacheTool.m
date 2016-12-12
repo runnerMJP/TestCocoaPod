@@ -68,6 +68,13 @@
         // 获取文件属性
         NSDictionary *dict = [manger attributesOfItemAtPath:filePath error:nil];
         
+        
+        
+        
+        
+        
+        
+        
         unsigned long long fileSize = [dict fileSize];
         totalSize +=fileSize;
     }
